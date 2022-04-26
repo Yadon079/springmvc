@@ -131,4 +131,12 @@ public class RequestParamController {
     return "ok";
   }
 
+  @ResponseBody
+  @RequestMapping("/model-attribute-v2")
+  public String modelAttribute(HelloData helloData) {
+    log.info("username = {}, age = {}", helloData.getUsername(), helloData.getAge());
+
+    return "ok";
+  }
+
 }
